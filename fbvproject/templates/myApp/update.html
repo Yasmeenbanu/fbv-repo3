@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% extends 'myApp/parent.html' %}
+  <body>
+    {% block for_child %}
+    <h1> UPDATION FORM </h1>
+    <form method="POST">
+      NAME: <input type="text" name="name" value="{{stud.name}}"><br><br>
+      USN: <input type="text" name="usn" value="{{stud.usn}}"><br><br>
+      SUBJECTS: <input type="text" name="subjects" value="{{stud.subjects}}"><br><br>
+      MARKS: <input type="text" name="marks" value="{{stud.marks}}"><br><br>
+      EMAIL: <input type="email" name="email" value="{{stud.email}}"><br><br>
+      ADDRESS: <input type="text" name="address" value="{{stud.address}}"><br><br>
+      {%csrf_token%}
+      <input type="submit" class="btn btn-lg btn-primary" value="SUBMIT">
+      </form>
+      {%endblock%}
+  </body>
+</html>
